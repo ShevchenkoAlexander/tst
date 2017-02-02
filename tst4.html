@@ -1,0 +1,41 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+<script type="text/javascript">
+function getName(){
+name = document.forms["reg"].elements["name"].value;
+date = document.forms["reg"].elements["date"].value;
+asd = document.forms["reg"].elements["asd"].value;
+ //   chk = document.forms["reg"].elements["chk"].value;
+res =name + ", " + date+ ", " + asd;
+console.log(name, date, asd);
+  
+    
+    var doc = new jsPDF()
+
+doc.text(name, 10, 10)
+doc.text(date, 10, 20)
+doc.text("qwe"+asd, 10, 30)
+//doc.text("qwe "+chk, 10, 40)
+doc.save('a4.pdf')
+
+}
+    
+</script>
+</head>
+<body>
+<form id="reg" name="reg">
+<input text="text" id="name" name="name" />
+    <input text="text" id="date" name="date" />
+    <input text="text" id="asd" name="asd" />
+    <input text="text" id="asd" name="asd" />
+    <input type="checkbox" name="transport" value="q" /> Автобус<br />
+    <input type="checkbox" name="transport" value="w" /> Автобус<br />
+    <input type="checkbox" name="transport" value="e" /> Автобус<br />
+    <input type="checkbox" name="transport" value="r" /> Автобус<br />
+<input type="button" value="Отправить" onClick="getName();" />
+</form>
+</body>
+</html>
+
+x = [a,b,c.d]
